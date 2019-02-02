@@ -134,7 +134,7 @@ function scrape_scraper() {
 
     # trap ctrl+c and return if pressed (rather than exiting retropie-setup etc)
     trap 'trap 2; return 1' INT
-    sudo -u $user "$md_inst/scraper" ${params[@]}
+    sudo -u $user "$md_inst/scraper_$system" ${params[@]}
     trap 2
 }
 
